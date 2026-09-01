@@ -42,7 +42,7 @@ export const profile = {
    * (e.g. put photo.jpg in the public/ folder and change this to "/photo.jpg").
    * It must be a real image file: the grader fetches it and checks.
    */
-  photoPath: "C:\\Users\\micah\\OneDrive\\Pictures\\Profile Pictures\\1-DSCF0032.jpg",
+  photoPath: "C:my-site\\1-DSCF0032 - Copy.jpg",
 
   /**
    * Who can see your roster card:
@@ -58,7 +58,7 @@ export const profile = {
    * A short bio for your home page: two or three sentences, written like
    * a person, not a resume. What are you studying? What do you care about?
    */
-  bio: "I'm a business analytics and MIS double major at the University of Delaware. I love to learn and grow in my knowledge and skills and I enjoy working on projects with people of all backgrounds.",
+  bio: "I'm a business analytics and MIS double major at the University of Delaware. I love to learn and grow in my knowledge and skills and I enjoy working on projects with people of various backgrounds and experiences.",
 
   /**
    * Your GitHub repo URL. The course platform reads this from /api/health to
