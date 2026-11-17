@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { profile } from "@/profile";
 import { Guestbook } from "@/components/Guestbook";
 
@@ -38,12 +39,33 @@ const SERVICES = [
 export default function HomePage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-14">
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-        {profile.tagline}
-      </p>
-      <h1 className="mt-3 text-5xl font-bold">{profile.displayName}</h1>
-      <p className="mt-5 max-w-prose text-lg text-muted">{profile.bio}</p>
+      <section className="relative overflow-hidden rounded-3xl border border-line bg-linear-to-br from-surface to-paper p-7 shadow-sm sm:p-10">
+        <div className="flex flex-col-reverse items-start gap-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="max-w-xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              {profile.tagline}
+            </p>
+            <h1 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl">
+              {profile.displayName}
+            </h1>
+            <p className="mt-5 max-w-prose text-lg text-muted">{profile.bio}</p>
+            <Link
+              href="/about"
+              className="mt-7 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition hover:opacity-90"
+            >
+              More about me
+            </Link>
+          </div>
+          <Image
+            src={profile.photoPath}
+            alt={profile.displayName}
+            width={192}
+            height={192}
+            priority
+            className="h-32 w-32 shrink-0 rounded-2xl border-4 border-surface object-cover shadow-md sm:h-44 sm:w-44"
+          />
+        </div>
+      </section>
 
       {/* ── Portfolio of decision services ───────────────────────────── */}
       <section className="mt-14">
